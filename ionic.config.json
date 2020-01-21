@@ -1,0 +1,7 @@
+{
+  "name": "SMF",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
