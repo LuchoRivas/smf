@@ -11,7 +11,8 @@ export class HomePage {
 
   constructor(private iab: InAppBrowser, public platform: Platform) { 
     platform.ready().then(() => {
-      const browser = this.iab.create('https://smf-website-dev.herokuapp.com/', '_blank');
+      const options = 'location=no,hidden=yes,zoom=no,hideurlbar=yes';
+      const browser = this.iab.create('https://smf-website-dev.herokuapp.com/login', '_blank', options);
       browser.show();
     })
   }
