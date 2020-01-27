@@ -12,7 +12,7 @@ export class HomePage {
 
   url: SafeResourceUrl
 
-  constructor(private _platform: Platform, private _sanitizer: DomSanitizer) {}
+  constructor(private _sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.url = this._sanitizer.bypassSecurityTrustResourceUrl("https://smf-website-dev.herokuapp.com/login")
