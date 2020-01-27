@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+<<<<<<< HEAD
 import { Platform, AlertController } from '@ionic/angular';
+=======
+import { Platform } from '@ionic/angular';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+>>>>>>> 7e58785705f8ef37457e5af4f8d412d87d6c1421
 
 @Component({
   selector: 'app-home',
@@ -9,6 +14,7 @@ import { Platform, AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
+<<<<<<< HEAD
   constructor(private _iab: InAppBrowser, private _platform: Platform, private _alertCtrl: AlertController) { }
 
   ionDidViewLoad() {
@@ -36,6 +42,14 @@ export class HomePage {
         }
       ]
     })
+=======
+  url: SafeResourceUrl
+
+  constructor(private _sanitizer: DomSanitizer) {}
+
+  ngOnInit() {
+    this.url = this._sanitizer.bypassSecurityTrustResourceUrl("https://smf-website-dev.herokuapp.com/login")
+>>>>>>> 7e58785705f8ef37457e5af4f8d412d87d6c1421
   }
 
 }
