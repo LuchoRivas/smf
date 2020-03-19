@@ -15,5 +15,4 @@ export class HomePage {
   ngOnInit() {
     this.url = this._sanitizer.bypassSecurityTrustResourceUrl("https://smf-staging.quadminds.io/login")
   }
-
 }
